@@ -1,4 +1,4 @@
-import { DataSection, Image } from "@/data/data"
+import { DataSection, Image } from "@/types/types"
 
 type ReviewItem = {
     name: string;

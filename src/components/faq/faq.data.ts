@@ -1,4 +1,4 @@
-import { DataSection } from "@/data/data"
+import { DataSection } from "@/types/types"
 
 type FaqItems = {
     question: string;

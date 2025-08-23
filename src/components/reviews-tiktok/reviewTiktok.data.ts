@@ -1,4 +1,4 @@
-import { DataSection, Image, Video } from "@/data/data"
+import { DataSection, Image, Video } from "@/types/types"
 
 type ReviewTiktokItem = {
     name: string;

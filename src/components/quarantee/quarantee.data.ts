@@ -1,4 +1,4 @@
-import { DataSection, Image } from "@/data/data"
+import { DataSection, Image } from "@/types/types"
 
 interface DataQuarantee extends DataSection {
     text: string;

@@ -1,4 +1,5 @@
-import { Link } from "@/data/data"
+import { Link } from "@/types/types"
+
 type rightsReserved = {
     textStart: string;
     textEnd: string;
@@ -14,13 +15,13 @@ type DataFooter = {
 export const dataFooter: DataFooter = {
     terms: {
         href: "/",
-        text: ""
+        text: "Terms & Conditions"
     },
     privacy: {
         href: "/",
-        text: ""
+        text: "Privacy Policy"
     },
-    text: "",
+    text: "This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.",
     rightsReserved: {
         textStart: "©",
         textEnd: "AIWeALTHMACHINE.Co . All Rights Reserved."
