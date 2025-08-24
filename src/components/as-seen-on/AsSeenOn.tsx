@@ -7,10 +7,8 @@ export default function AsSeenOn() {
 
     return (
         <section className="flex flex-col justify-center items-center py-9 px-4 px-md-14">
-            <div className="mb-8 outline-2 outline-[#E7AB00] rounded-2xl py-1 px-3 font-inter font-black bg-gradient-to-r from-yellow-custom via-yellow-custom/50 to-yellow-custom"
-                style={{
-                    boxShadow: `0 4px 24px rgba(254, 194, 1, 0.56)`,
-                }}>
+            <div className="mb-8 outline-2 outline-yellow-dark-custom rounded-2xl py-1 px-3 font-inter font-black 
+            bg-gradient-to-r from-yellow-custom via-yellow-custom/50 to-yellow-custom shadow-gold">
                 {dataAsSeenOn.title}
             </div>
             <div className="flex flex-wrap max-w-full justify-center items-center gap-y-3 gap-x-4">

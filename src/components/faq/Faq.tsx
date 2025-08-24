@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { dataFaq } from "@/components/faq/faq.data"
+import CTAButton from "@/components/cta-button/CTAButton"
 
 export default function Faq() {
   return (
@@ -23,6 +24,7 @@ export default function Faq() {
           </AccordionItem>
         ))}
       </Accordion>
+      <CTAButton className="md:w-100" />
     </section>
   )
 }

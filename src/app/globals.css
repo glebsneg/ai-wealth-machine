@@ -9,11 +9,14 @@
   --color-gold-custom-start: #FDE87C;
   --color-gold-custom-end: #F6C136;
   --color-yellow-custom: #FEC201;
+  --color-yellow-dark-custom: #E7AB00;
   --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   /* Rebond replaced by Cabin */
   --font-rebond: var(--font-cabin), ui-sans-serif, system-ui, sans-serif;
   /* At Chrome TRIAL replaced by Montserrat */
   --font-at-chrome: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  /* PF Marlet Display replaced by Playfair_Display */
+  --font-pf-marlet: var(--font-playfair), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
@@ -38,5 +41,9 @@
   h1,
   h2 {
     @apply text-[44px];
+  }
+
+  .shadow-gold {
+    box-shadow: 0 4px 24px rgba(254, 194, 1, 0.56);
   }
 }

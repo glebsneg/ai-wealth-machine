@@ -19,3 +19,7 @@ export type Link = {
     href: string;
     text: string
 }
+
+export type Props = {
+    className?: string
+}

@@ -12,13 +12,15 @@ type Service = {
 }
 
 interface DataGetAccess extends DataSection {
+    titleEnd: string;
     badgeTop: string;
     services: Service[];
     signed: string;
 }
 
 export const dataGetAccess: DataGetAccess = {
-    title: "GET ACCESS Now And You'll Get:",
+    title: "GET ACCESS Now",
+    titleEnd: "And You'll Get:",
     subtitleTop: "PRICE DOUBLES SOON!",
     badgeTop: "LIMITED TIME",
     services: [

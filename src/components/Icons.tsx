@@ -1,9 +1,13 @@
 import { FC, SVGProps } from "react";
+import { useId } from 'react'
 
-interface IconSvgProps extends FC<SVGProps<SVGSVGElement>> {
-}
+export type IconSvgProps = SVGProps<SVGSVGElement> & {
+    size?: number;
+    width?: number;
+    height?: number;
+};
 
-const IconBBC: IconSvgProps = ({
+const IconBBC: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="126" height="37" viewBox="0 0 126 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +18,7 @@ const IconBBC: IconSvgProps = ({
 );
 
 
-const IconWired: IconSvgProps = ({
+const IconWired: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="155" height="37" viewBox="0 0 155 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +33,7 @@ const IconWired: IconSvgProps = ({
 
 );
 
-const IconBusinessInsider: IconSvgProps = ({
+const IconBusinessInsider: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="114" height="37" viewBox="0 0 114 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +55,7 @@ const IconBusinessInsider: IconSvgProps = ({
     </svg>
 );
 
-const IconTheGuardian: IconSvgProps = ({
+const IconTheGuardian: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="122" height="41" viewBox="0 0 122 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +64,7 @@ const IconTheGuardian: IconSvgProps = ({
 
 );
 
-const IconWashingtonPost: IconSvgProps = ({
+const IconWashingtonPost: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="220" height="33" viewBox="0 0 220 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +73,7 @@ const IconWashingtonPost: IconSvgProps = ({
 
 );
 
-const IconCNBC: IconSvgProps = ({
+const IconCNBC: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="101" height="75" viewBox="0 0 101 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +89,7 @@ const IconCNBC: IconSvgProps = ({
 
 );
 
-const IconReuters: IconSvgProps = ({
+const IconReuters: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="191" height="49" viewBox="0 0 191 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,7 +180,7 @@ const IconReuters: IconSvgProps = ({
 
 );
 
-const IconFortune: IconSvgProps = ({
+const IconFortune: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="155" height="49" viewBox="0 0 155 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +189,7 @@ const IconFortune: IconSvgProps = ({
 
 );
 
-const IconYahooFinance: IconSvgProps = ({
+const IconYahooFinance: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="132" height="49" viewBox="0 0 132 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,7 +198,7 @@ const IconYahooFinance: IconSvgProps = ({
 
 );
 
-const IconMarketWatch: IconSvgProps = ({
+const IconMarketWatch: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="225" height="33" viewBox="0 0 225 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -213,7 +217,7 @@ const IconMarketWatch: IconSvgProps = ({
 
 );
 
-const IconInc: IconSvgProps = ({
+const IconInc: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="93" height="33" viewBox="0 0 93 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -225,7 +229,7 @@ const IconInc: IconSvgProps = ({
 
 );
 
-const IconEntrepreneur: IconSvgProps = ({
+const IconEntrepreneur: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="163" height="33" viewBox="0 0 163 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -245,7 +249,7 @@ const IconEntrepreneur: IconSvgProps = ({
 
 );
 
-const IconCrunchbase: IconSvgProps = ({
+const IconCrunchbase: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="227" height="33" viewBox="0 0 227 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +267,7 @@ const IconCrunchbase: IconSvgProps = ({
 
 );
 
-const IconTheEconomist: IconSvgProps = ({
+const IconTheEconomist: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="111" height="57" viewBox="0 0 111 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -273,7 +277,7 @@ const IconTheEconomist: IconSvgProps = ({
 
 );
 
-const IconYCombinator: IconSvgProps = ({
+const IconYCombinator: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -282,7 +286,7 @@ const IconYCombinator: IconSvgProps = ({
 
 );
 
-const IconFT: IconSvgProps = ({
+const IconFT: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="41" height="57" viewBox="0 0 41 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -293,7 +297,7 @@ const IconFT: IconSvgProps = ({
 
 );
 
-const IconTechEU: IconSvgProps = ({
+const IconTechEU: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="76" height="57" viewBox="0 0 76 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -302,7 +306,7 @@ const IconTechEU: IconSvgProps = ({
     </svg>
 );
 
-export const IconBloomberg: IconSvgProps = ({
+export const IconBloomberg: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="144" height="28" viewBox="0 0 144 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -312,7 +316,7 @@ export const IconBloomberg: IconSvgProps = ({
 
 );
 
-export const IconForbes: IconSvgProps = ({
+export const IconForbes: FC<IconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="115" height="30" viewBox="0 0 115 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -326,9 +330,72 @@ export const IconForbes: IconSvgProps = ({
 
 );
 
+export const IconShield: FC<IconSvgProps> = ({
+    size = 17,
+    ...props
+}) => (
+    <svg {...props} width={size * 0.9411764706} height={size} viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 3.26367H3C2.73478 3.26367 2.48043 3.36903 2.29289 3.55657C2.10536 3.7441 2 3.99846 2 4.26367V7.93242C2 13.5199 6.7375 15.3762 7.6875 15.6887C7.89048 15.7554 8.10952 15.7554 8.3125 15.6887C9.2625 15.3762 14 13.5199 14 7.93242V4.26367C14 3.99846 13.8946 3.7441 13.7071 3.55657C13.5196 3.36903 13.2652 3.26367 13 3.26367V3.26367Z" fill="black" />
+    </svg>
+);
+
+export const IconCheck: FC<IconSvgProps> = ({
+    size = 17,
+    className,
+    ...props
+}) => {
+    const id = useId()
+
+    return (
+        <svg
+            width={size * 0.9411764706}
+            height={size}
+            viewBox="0 0 16 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
+            {...props}
+        >
+            <path
+                d="M13.5 5.26367L6.5 12.2637L3 8.76367"
+                stroke={`url(#${id})`}
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <defs>
+                <linearGradient id={id} x1="14.41" y1="13.7466" x2="4.43051" y2="3.11269" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#FF9A23" />
+                    <stop offset="1" stopColor="#FF0843" />
+                </linearGradient>
+            </defs>
+        </svg>
+    )
+}
+
+export const IconCheckStar: FC<IconSvgProps> = ({
+    size = 33,
+    className,
+    ...props
+}) => {
+    const id = useId()
+
+    return (
+        <svg {...props} width={size * 0.9696969697} height={size} viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.2375 13.6137C27.7625 13.1262 27.275 12.6137 27.0875 12.1762C26.9 11.7387 26.9125 11.0887 26.9 10.4262C26.8875 9.21367 26.8625 7.82617 25.9 6.86367C24.9375 5.90117 23.55 5.87617 22.3375 5.86367C21.675 5.85117 21 5.83867 20.5875 5.67617C20.175 5.51367 19.6375 5.00117 19.15 4.52617C18.2875 3.70117 17.3 2.76367 16 2.76367C14.7 2.76367 13.7125 3.70117 12.85 4.52617C12.3625 5.00117 11.85 5.48867 11.4125 5.67617C10.975 5.86367 10.325 5.85117 9.6625 5.86367C8.45 5.87617 7.0625 5.90117 6.1 6.86367C5.1375 7.82617 5.1125 9.21367 5.1 10.4262C5.0875 11.0887 5.075 11.7637 4.9125 12.1762C4.75 12.5887 4.2375 13.1262 3.7625 13.6137C2.9375 14.4762 2 15.4637 2 16.7637C2 18.0637 2.9375 19.0512 3.7625 19.9137C4.2375 20.4012 4.725 20.9137 4.9125 21.3512C5.1 21.7887 5.0875 22.4387 5.1 23.1012C5.1125 24.3137 5.1375 25.7012 6.1 26.6637C7.0625 27.6262 8.45 27.6512 9.6625 27.6637C10.325 27.6762 11 27.6887 11.4125 27.8512C11.825 28.0137 12.3625 28.5262 12.85 29.0012C13.7125 29.8262 14.7 30.7637 16 30.7637C17.3 30.7637 18.2875 29.8262 19.15 29.0012C19.6375 28.5262 20.15 28.0387 20.5875 27.8512C21.025 27.6637 21.675 27.6762 22.3375 27.6637C23.55 27.6512 24.9375 27.6262 25.9 26.6637C26.8625 25.7012 26.8875 24.3137 26.9 23.1012C26.9125 22.4387 26.925 21.7637 27.0875 21.3512C27.25 20.9387 27.7625 20.4012 28.2375 19.9137C29.0625 19.0512 30 18.0637 30 16.7637C30 15.4637 29.0625 14.4762 28.2375 13.6137ZM22.1875 14.4887L14.8625 21.4887C14.6731 21.6668 14.4225 21.7653 14.1625 21.7637C13.9063 21.7646 13.6598 21.666 13.475 21.4887L9.8125 17.9887C9.71092 17.9 9.6283 17.7918 9.56962 17.6704C9.51094 17.549 9.47741 17.4171 9.47104 17.2824C9.46466 17.1477 9.48559 17.0132 9.53255 16.8868C9.5795 16.7604 9.65153 16.6449 9.74429 16.5471C9.83706 16.4492 9.94864 16.3712 10.0723 16.3176C10.196 16.264 10.3293 16.2359 10.4641 16.2352C10.5989 16.2344 10.7325 16.2609 10.8568 16.313C10.9811 16.3652 11.0936 16.4419 11.1875 16.5387L14.1625 19.3762L20.8125 13.0387C21.0069 12.869 21.2594 12.7811 21.5172 12.7933C21.7749 12.8055 22.018 12.9169 22.1955 13.1041C22.3731 13.2913 22.4714 13.54 22.4699 13.798C22.4684 14.056 22.3672 14.3035 22.1875 14.4887Z" fill={`url(#${id})`} />
+            <defs>
+                <linearGradient id={id} x1="32.4267" y1="36.6954" x2="-5.34209" y2="9.86508" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF9A23" />
+                    <stop offset="1" stop-color="#FF0843" />
+                </linearGradient>
+            </defs>
+        </svg>
+    )
+}
+
 interface LogosAll {
     name: string;
-    component: IconSvgProps;
+    component: FC<IconSvgProps>;
 }
 
 export const LOGOS_ALL: Readonly<LogosAll>[] = [
