@@ -1,4 +1,4 @@
-import { DataSection } from "@/types/types";
+import { IDataSection } from "@/types/types";
 
 type Price = {
     text: string;
@@ -11,14 +11,14 @@ type Service = {
     price: Price;
 }
 
-interface DataGetAccess extends DataSection {
+interface IDataGetAccess extends IDataSection {
     titleEnd: string;
     badgeTop: string;
     services: Service[];
     signed: string;
 }
 
-export const dataGetAccess: DataGetAccess = {
+export const dataGetAccess: IDataGetAccess = {
     title: "GET ACCESS Now",
     titleEnd: "And You'll Get:",
     subtitleTop: "PRICE DOUBLES SOON!",

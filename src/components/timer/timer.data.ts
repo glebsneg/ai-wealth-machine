@@ -1,5 +1,5 @@
-import { DataSection } from "@/types/types";
+import { IDataSection } from "@/types/types";
 
-export const dataTimer: DataSection = {
+export const dataTimer: IDataSection = {
     title: "Start making money in...",
 }

@@ -1,5 +1,5 @@
-import { DataSection } from "@/types/types";
+import { IDataSection } from "@/types/types";
 
-export const dataHeader: DataSection = {
+export const dataHeader: IDataSection = {
     title: "DO NOT CLOSE THIS PAGE",
 }

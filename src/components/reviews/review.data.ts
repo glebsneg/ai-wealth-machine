@@ -1,4 +1,4 @@
-import { DataSection, Image } from "@/types/types"
+import { IDataSection, Image } from "@/types/types"
 
 type ReviewItem = {
     name: string;
@@ -8,11 +8,11 @@ type ReviewItem = {
     photo: Image;
 }
 
-interface DataReview extends DataSection {
+interface IDataReview extends IDataSection {
     reviewItems: ReviewItem[];
 }
 
-export const dataReview: DataReview = {
+export const dataReview: IDataReview = {
     title: "What our members are saying...",
     subtitleTop: "customer reviews",
     reviewItems: [

@@ -2,7 +2,7 @@ import { Cabin, Inter, Montserrat, Playfair_Display } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
-  weight: ["900"],
+  weight: ["400", "900"],
   variable: "--font-inter",
 });
 

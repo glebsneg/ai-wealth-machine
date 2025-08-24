@@ -1,4 +1,4 @@
-import { DataSection, Image, Video } from "@/types/types"
+import { IDataSection, Image, Video } from "@/types/types"
 
 type ReviewTiktokItem = {
     name: string;
@@ -11,12 +11,12 @@ type ReviewMagazineItem = {
 }
 
 
-interface DataReviewTiktok extends DataSection {
+interface IDataReviewTiktok extends IDataSection {
     reviewTiktokItems: ReviewTiktokItem[];
     reviewMagazineItems: ReviewMagazineItem[];
 }
 
-export const dataRevieTiktok: DataReviewTiktok = {
+export const dataRevieTiktok: IDataReviewTiktok = {
     title: "We made them talk about us....",
     reviewTiktokItems: [
         {

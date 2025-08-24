@@ -1,11 +1,11 @@
-import { DataSection } from "@/types/types"
+import { IDataSection } from "@/types/types"
 
 type LeaderboardItem = {
     name: string;
     incomeAllTime: number;
     incomeLatsMonth: number;
 }
-interface DataLeaderboard extends DataSection {
+interface IDataLeaderboard extends IDataSection {
     leaderboardItem: LeaderboardItem[];
     etcBlock: string;
     statistics: {
@@ -14,7 +14,7 @@ interface DataLeaderboard extends DataSection {
     }[];
 }
 
-export const dataLeaderboard: DataLeaderboard = {
+export const dataLeaderboard: IDataLeaderboard = {
     title: "Ai Wealth Leaderboard",
     subtitleTop: "June - Top 3",
     subtitleBottom: "Join other people and win prizes",

@@ -1,5 +1,5 @@
-import { DataSection } from "@/types/types";
+import { IDataSection } from "@/types/types";
 
-export const dataAsSeenOn: DataSection = {
+export const dataAsSeenOn: IDataSection = {
     title: "AS SEEN ON",
 }

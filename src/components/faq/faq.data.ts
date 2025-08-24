@@ -1,14 +1,14 @@
-import { DataSection } from "@/types/types"
+import { IDataSection } from "@/types/types"
 
 type FaqItems = {
     question: string;
     answer: string;
 }
-interface DataFaq extends DataSection {
+interface IDataFaq extends IDataSection {
     faqItems: FaqItems[];
 }
 
-export const dataFaq: DataFaq = {
+export const dataFaq: IDataFaq = {
     title: "Frequently asked questions",
     faqItems: [{
         question: "How much time will I need to invest before seeing my first sale?",

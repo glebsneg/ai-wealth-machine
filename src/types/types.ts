@@ -1,4 +1,4 @@
-export interface DataSection {
+export interface IDataSection {
     title: string;
     subtitleTop?: string;
     subtitleBottom?: string;
