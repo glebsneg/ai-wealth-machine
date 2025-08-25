@@ -11,7 +11,7 @@ export default function CTAButton({ className }: Props) {
 
   return (
     <div className={clsx("flex justify-center items-center self-center", className)}>
-      <Button variant="outline" className={clsx("px-14 py-[10px] w-full h-18 border-2 flex flex-col uppercase",
+      <Button variant="outline" className={clsx("px-14 py-2.5 w-full h-18 border-2 flex flex-col uppercase",
         timerFinished && "border-yellow-dark-custom bg-gradient-to-r from-yellow-custom via-yellow-custom/50 to-yellow-custom shadow-gold"
       )}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>

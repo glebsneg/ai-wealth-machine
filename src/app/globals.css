@@ -40,7 +40,7 @@
 
   h1,
   h2 {
-    @apply text-[44px];
+    @apply font-at-chrome font-bold text-center;
   }
 
   .shadow-gold {

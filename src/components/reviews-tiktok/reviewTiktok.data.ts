@@ -23,32 +23,48 @@ export const dataRevieTiktok: IDataReviewTiktok = {
             name: "Adam Sandler",
             video: {
                 src: "",
-                poster: "",
-                alt: ""
+                srcMobile: undefined,
+                poster: {
+                    src: "",
+                    srcMobile: undefined,
+                    alt: ""
+                }
             }
         },
         {
             name: "Jordan Peterson",
             video: {
                 src: "",
-                poster: "",
-                alt: ""
+                srcMobile: undefined,
+                poster: {
+                    src: "",
+                    srcMobile: undefined,
+                    alt: ""
+                }
             }
         },
         {
             name: "Elon Musk",
             video: {
                 src: "",
-                poster: "",
-                alt: ""
+                srcMobile: undefined,
+                poster: {
+                    src: "",
+                    srcMobile: undefined,
+                    alt: ""
+                }
             }
         },
         {
             name: "\"THE ROCK\"",
             video: {
                 src: "",
-                poster: "",
-                alt: ""
+                srcMobile: undefined,
+                poster: {
+                    src: "",
+                    srcMobile: undefined,
+                    alt: ""
+                }
             }
         },
     ],

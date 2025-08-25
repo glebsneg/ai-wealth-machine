@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface IDataSection {
     title: string;
     subtitleTop?: string;
@@ -5,14 +7,15 @@ export interface IDataSection {
 }
 
 export type Image = {
-    src: string;
+    src: StaticImageData | string;
+    srcMobile?: StaticImageData | string;
     alt: string;
 }
 
 export type Video = {
     src: string;
-    poster: string;
-    alt: string;
+    srcMobile?: string;
+    poster: Image;
 }
 
 export type Link = {
