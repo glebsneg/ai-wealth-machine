@@ -172,15 +172,13 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function CarouselPrevious({
-  className,
-  variant = "outline",
-  size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+  const { scrollPrev, canScrollPrev } = useCarousel()
 
   return (
     <button
+      aria-label="Previous button for carousel"
       data-slot="carousel-previous"
       disabled={!canScrollPrev}
       onClick={scrollPrev}
@@ -191,15 +189,13 @@ function CarouselPrevious({
 }
 
 function CarouselNext({
-  className,
-  variant = "outline",
-  size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
+  const { scrollNext, canScrollNext } = useCarousel()
 
   return (
     <button
+      aria-label="Next button for carousel"
       data-slot="carousel-previous"
       disabled={!canScrollNext}
       onClick={scrollNext}

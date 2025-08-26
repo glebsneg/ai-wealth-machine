@@ -18,6 +18,7 @@ export default function Hero() {
       <p className="text-base md:text-xl text-black/56 mb-4 md:mb-8">{dataHero.subtitleBottom}</p>
       <VideoCStartTimer
         dataVideoParameter={dataHero.video}
+        fetchPriority="high"
         aspectRatio="aspect-[1/1.23] md:aspect-video"
         className="aspect-[1/1.23] md:aspect-video 2xl:w-2/3"
       />

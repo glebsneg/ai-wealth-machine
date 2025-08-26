@@ -14,7 +14,7 @@ export type Image = {
 
 export type Video = {
     src: string;
-    srcMobile?: string;
+    srcMobile: string;
     poster: Image;
 }
 

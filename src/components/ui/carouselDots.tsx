@@ -27,10 +27,6 @@ export default function CarouselDots({ api, length, className }: { api: Carousel
         setTotalItems(length);
     }, [length]);
 
-    const scrollToIndex = (index: number) => {
-        api?.scrollTo(index);
-    };
-
     return (
         <div className={clsx("static flex justify-center items-center gap-2.5", className)}>
             {
@@ -41,13 +37,11 @@ export default function CarouselDots({ api, length, className }: { api: Carousel
                             bgGradientColorFrom={isCurrentIndex ? "rgba(253, 232, 124, 1)" : "rgba(255, 255, 255, 0.56)"}
                             bgGradientColorTo={isCurrentIndex ? "rgba(246, 193, 54, 1)" : "rgba(255, 255, 255, 0.56)"}
                         >
-                            <button
-                                key={i}
-                                onClick={() => scrollToIndex(i)}
+                            <span
                                 className={clsx("rounded-full",
                                     isCurrentIndex ? "w-4 h-4" : "w-2 h-2"
                                 )}
-                            />
+                            ></span>
                         </GradientWrapper>
                     )
                 })

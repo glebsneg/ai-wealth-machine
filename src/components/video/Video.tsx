@@ -12,11 +12,22 @@ export type VideoCProps = {
     controls?: boolean;
     widthStartVideo?: () => void;
     aspectRatio?: string;
+    fetchPriority?: "auto" | "high" | "low" | undefined;
     classNameVideo?: string;
     className?: string;
+
 }
 
-export default function VideoC({ dataVideoParameter, pauseOnClick = false, controls = true, widthStartVideo = () => { }, aspectRatio = "", classNameVideo = "", className = "" }: VideoCProps) {
+export default function VideoC({
+    dataVideoParameter,
+    pauseOnClick = false,
+    controls = true,
+    widthStartVideo = () => { },
+    aspectRatio = "",
+    fetchPriority = "auto",
+    classNameVideo = "",
+    className = ""
+}: VideoCProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [videoStarted, setVideoStarted] = useState<boolean>(false);
 
@@ -26,8 +37,6 @@ export default function VideoC({ dataVideoParameter, pauseOnClick = false, contr
             videoRef.current.play();
         }
     };
-
-    dataVideoParameter.srcMobile = dataVideoParameter.srcMobile ? dataVideoParameter.srcMobile : dataVideoParameter.src;
 
     return (
         <div className={clsx("relative w-full", className)}>
@@ -46,6 +55,7 @@ export default function VideoC({ dataVideoParameter, pauseOnClick = false, contr
                     src={(dataVideoParameter.poster.srcMobile as StaticImageData)?.src ?? (dataVideoParameter.poster.src as StaticImageData).src}
                     alt={dataVideoParameter.poster.alt}
                     priority
+                    fetchPriority={fetchPriority}
                     className={clsx("",
                         videoStarted ? "hidden" : "flex")} />
             </picture>

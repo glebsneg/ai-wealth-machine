@@ -39,6 +39,7 @@ export const dataRevieTiktok: IDataReviewTiktok = {
             name: "Adam Sandler",
             video: {
                 src: "/videos/hero/mobile.mp4",
+                srcMobile: "/videos/hero/mobile.mp4",
                 poster: {
                     src: reviewsTiktok_1,
                     alt: "reviewsTiktok_1"
@@ -49,6 +50,7 @@ export const dataRevieTiktok: IDataReviewTiktok = {
             name: "Jordan Peterson",
             video: {
                 src: "/videos/hero/mobile.mp4",
+                srcMobile: "/videos/hero/mobile.mp4",
                 poster: {
                     src: reviewsTiktok_2,
                     alt: "reviewsTiktok_2"
@@ -59,6 +61,7 @@ export const dataRevieTiktok: IDataReviewTiktok = {
             name: "Elon Musk",
             video: {
                 src: "/videos/hero/mobile.mp4",
+                srcMobile: "/videos/hero/mobile.mp4",
                 poster: {
                     src: reviewsTiktok_3,
                     alt: "reviewsTiktok_3"
@@ -69,6 +72,7 @@ export const dataRevieTiktok: IDataReviewTiktok = {
             name: "\"THE ROCK\"",
             video: {
                 src: "/videos/hero/mobile.mp4",
+                srcMobile: "/videos/hero/mobile.mp4",
                 poster: {
                     src: reviewsTiktok_4,
                     alt: "reviewsTiktok_4"
