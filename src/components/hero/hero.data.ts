@@ -13,7 +13,6 @@ export const dataHero: IDataHero = {
     precentage: "62%",
     video: {
         src: "/videos/hero/desktop.mp4",
-        srcMobile: "/videos/hero/mobile.mp4",
         poster: {
             src: srcPosterDesktop,
             srcMobile: srcPosterMobile,

@@ -1,0 +1,40 @@
+.card {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(var(--bg-gradient));
+    z-index: 0;
+}
+
+.inner {
+    position: relative;
+    z-index: 5;
+    border-radius: inherit;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    inset: var(--inset, 0);
+    border-radius: inherit;
+    padding: var(--stroke-width, 1px);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.card::before {
+    z-index: 1;
+    background: linear-gradient(var(--stroke1));
+}
+
+.card::after {
+    z-index: 2;
+    background: linear-gradient(var(--stroke2));
+}
+
+.card:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, .4);
+    outline-offset: 2px;
+}

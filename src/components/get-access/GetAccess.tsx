@@ -2,15 +2,16 @@ import { dataGetAccess } from "@/components/get-access/getAccess.data"
 import { IconCheck, IconCheckStar } from "@/components/Icons";
 import CTAButton from "@/components/cta-button/CTAButton";
 import ClientLastName from "@/components/get-access/ClientLastName";
-// TODO: gradient border
+import GradientWrapper from "@/components/gradient-card/GradientWrapper";
+
 export default function GetAccess() {
     return (
 
-        <div className="font-at-chrome rounded-3xl bg-[linear-gradient(60deg,_#ff0433_0%,_#ffb243_10%,_rgba(0,0,0,0.12)_15%,_rgba(0,0,0,0.12)_90%,_#ffb243_95%,_#ff0433_100%)] p-[0.063rem]">
+        <div className="font-at-chrome rounded-3xl bg-[linear-gradient(60deg,_#ff0433_0%,_#ffb243_10%,_rgba(0,0,0,0.12)_15%,_rgba(0,0,0,0.12)_90%,_#ffb243_95%,_#ff0433_100%)] p-[1px]">
             <div className="bg-white rounded-3xl relative">
                 <div className="bg-orange-custom py-3 flex justify-center items-center rounded-t-3xl
                     font-bold text-xs lg:text-base
-                    absolute -top-[0.063rem] -left-[0.063rem] w-[calc(100%+2px)] h-14">
+                    absolute -top-[1px] -left-[1px] w-[calc(100%+2px)] h-14">
                     <span className="text-white pr-2.5">{dataGetAccess.subtitleTop}</span>
                     <span className="bg-yellow-custom rounded-[3.5rem] px-3 py-1">{dataGetAccess.badgeTop}</span>
                 </div>
@@ -40,21 +41,32 @@ export default function GetAccess() {
                             </div>
                         ))}
                     </div>
-                    <div className="rounded-xl
-                    bg-[linear-gradient(170deg,_rgba(255,8,67,0.12)_0%,_rgba(255,8,67,0.12)_30%,_rgba(255,154,35,0.12)_100%)]
+                    <GradientWrapper
+                        asChild
+                        bgGradientColorFrom={"rgba(255,8,67,0.12)"}
+                        bgGradientColorTo={"rgba(255,154,35,0.12)"}
+                        bgGradient_deg="94deg"
+
+                        gradientColorFrom_1="rgba(255, 154, 35, 0.24)"
+                        gradientColorTo_1="rgba(255, 8, 67, 0.24)"
+
+                        className="rounded-xl"
+                    >
+                        <div className="
                         px-4 lg:px-6 py-3 mb-4 lg:mb-6
                         flex items-center justify-center gap-3">
-                        <IconCheckStar />
-                        <span className="font-semibold
-                        bg-clip-text text-transparent bg-[linear-gradient(170deg,_rgba(255,8,67,1)_0%,_rgba(255,8,67,1)_30%,_rgba(255,154,35,1)_100%)]">
-                            {dataGetAccess.signed}
-                        </span>
-                        <div className="flex-grow border-t border-dashed border-black"></div>
-                        <span className="font-pf-marlet text-2xl px-2 -mt-1
-                        bg-clip-text text-transparent bg-[linear-gradient(170deg,_rgba(255,8,67,1)_0%,_rgba(255,8,67,1)_30%,_rgba(255,154,35,1)_100%)]">
-                            <ClientLastName />
-                        </span>
-                    </div>
+                            <IconCheckStar />
+                            <span className="font-semibold
+                        bg-clip-text text-transparent bg-[linear-gradient(94deg,_rgba(255,8,67,1)_0%,_rgba(255,8,67,1)_30%,_rgba(255,154,35,1)_100%)]">
+                                {dataGetAccess.signed}
+                            </span>
+                            <div className="flex-grow border-t border-dashed border-black"></div>
+                            <span className="font-pf-marlet text-2xl px-2 -mt-1
+                        bg-clip-text text-transparent bg-[linear-gradient(106deg,_rgba(255,8,67,1)_0%,_rgba(255,8,67,1)_30%,_rgba(255,154,35,1)_100%)]">
+                                <ClientLastName />
+                            </span>
+                        </div>
+                    </GradientWrapper>
                     <CTAButton />
                 </div>
             </div>

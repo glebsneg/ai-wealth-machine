@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import { rebond, inter, atChrome, pFMarletDisplay } from "@/config/fonts";
+import { rebond, inter, atChrome, pFMarletDisplay, paralucent } from "@/config/fonts";
 import clsx from "clsx";
 import { DataLayout } from "./layout.data";
 
@@ -20,7 +20,7 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         data-last-name={lastName}
-        className={clsx("antialiased text-foreground bg-background", inter.variable, rebond.variable, atChrome.variable, pFMarletDisplay.variable)}
+        className={clsx("antialiased text-foreground bg-background", inter.variable, rebond.variable, atChrome.variable, pFMarletDisplay.variable, paralucent.variable)}
       >
         {children}
       </body>

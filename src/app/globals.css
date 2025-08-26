@@ -12,11 +12,43 @@
   --color-yellow-dark-custom: #E7AB00;
   --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   /* Rebond replaced by Cabin */
-  --font-rebond: var(--font-cabin), ui-sans-serif, system-ui, sans-serif;
+  --font-rebond: var(--font-rebond), ui-sans-serif, system-ui, sans-serif;
   /* At Chrome TRIAL replaced by Montserrat */
-  --font-at-chrome: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-at-chrome: var(--font-atChrome), ui-sans-serif, system-ui, sans-serif;
   /* PF Marlet Display replaced by Playfair_Display */
-  --font-pf-marlet: var(--font-playfair), ui-sans-serif, system-ui, sans-serif;
+  --font-pf-marlet: var(--font-pFMarletDisplay), ui-sans-serif, system-ui, sans-serif;
+  /* Paralucent replaced by Rubik */
+  --font-paralucent: var(--font-paralucent), ui-sans-serif, system-ui, sans-serif;
+
+  /* Animations */
+  --animate-grow: grow 3000ms ease-in-out infinite;
+
+  @keyframes grow {
+    from {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.15);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes move-columns {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: -100px 0;
+      /* сдвигать влево */
+    }
+  }
+
+
 }
 
 :root {
@@ -43,7 +75,42 @@
     @apply font-at-chrome font-bold text-center;
   }
 
-  .shadow-gold {
-    box-shadow: 0 4px 24px rgba(254, 194, 1, 0.56);
+}
+
+.shadow-gold {
+  box-shadow: 0 4px 24px rgba(254, 194, 1, 0.56);
+}
+
+.bg-moving-columns {
+  --col-w: 12rem;
+  --line-w: 2px;
+  --line-color: rgba(255, 68, 0, 0.3);
+  --line-alpha-stop: 40%;
+
+  background-image:
+    linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      var(--line-color) var(--line-alpha-stop),
+      rgba(255, 255, 255, 0) 100%),
+    repeating-linear-gradient(90deg,
+      transparent 0 calc(var(--col-w) - var(--line-w)),
+      var(--line-color) calc(var(--col-w) - var(--line-w)) var(--col-w));
+
+  background-size: auto 100%, var(--col-w) 100%;
+  background-repeat: repeat, repeat;
+  background-position: 0 0, 0 0;
+}
+
+@keyframes slide-columns {
+  from {
+    background-position: 0 0, 0 0;
   }
+
+  to {
+    background-position: 0 0, calc(-1 * var(--col-w)) 0;
+  }
+}
+
+.animate-columns {
+  animation: slide-columns 12s linear infinite;
 }
