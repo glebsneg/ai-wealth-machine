@@ -36,16 +36,37 @@ export default function VideoC({
     const [videoStarted, setVideoStarted] = useState<boolean>(false);
 
     const handlePlay = () => {
-        if (videoRef.current) {
-            setVideoStarted(true);
-            videoRef.current.play();
+        const video = videoRef.current;
+        if (!video) {
+            return;
+        }
+        try {
+            // Ensure the element is loaded and rendered before playing (iOS quirk)
+            video.load();
+            const playPromise = video.play();
+            if (playPromise && typeof playPromise.then === "function") {
+                playPromise
+                    .then(() => {
+                        setVideoStarted(true);
+                    })
+                    .catch((error) => {
+                        // Keep poster visible if play fails
+                        setVideoStarted(false);
+                        console.warn("Video play() failed", error);
+                    });
+            } else {
+                setVideoStarted(true);
+            }
+        } catch (error) {
+            setVideoStarted(false);
+            console.warn("Video load/play threw", error);
         }
     };
 
     return (
         <div className={clsx("relative w-full", className)}>
 
-            <picture className="absolute inset-0">
+            <picture className="absolute inset-0 pointer-events-none">
                 {dataVideoParameter.poster.srcMobile &&
                     <source
                         srcSet={(dataVideoParameter.poster.src as StaticImageData).src}
@@ -62,14 +83,15 @@ export default function VideoC({
                     priority
                     fetchPriority={fetchPriority}
                     className={clsx("",
-                        videoStarted ? "hidden" : "flex")} />
+                        videoStarted ? "opacity-0" : "opacity-100")} />
             </picture>
 
 
             <div className={clsx("relative rounded-2xl overflow-hidden object-contain", aspectRatio, classNameVideo)}>
                 <video className={clsx("bg-black",
                     aspectRatio,
-                    videoStarted ? "flex" : "hidden")}
+                    "flex",
+                    videoStarted ? "opacity-100" : "opacity-0")}
                     ref={videoRef}
                     controls={controls}
                     onClick={(e) => {
@@ -88,7 +110,7 @@ export default function VideoC({
                     <source src={dataVideoParameter.srcMobile} media="(max-width: 767px)" type="video/mp4" />
                 </video>
             </div>
-            <button className={clsx("absolute w-1/2 md:w-1/4 h-1/3 top-[33%] left-[25%] md:left-[38%]",
+            <button className={clsx("absolute z-10 w-1/2 md:w-1/4 h-1/3 top-[33%] left-[25%] md:left-[38%]",
                 videoStarted ? "hidden" : "flex")}
                 onClick={() => {
                     handlePlay();
