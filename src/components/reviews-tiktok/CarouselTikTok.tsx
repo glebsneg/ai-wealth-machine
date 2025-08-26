@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { dataRevieTiktok } from "@/components/reviews-tiktok/reviewTiktok.data"
-import VideoC from "@/components/video/Video"
+import VideoC from "@/components/video/VideoC"
 import { IconCheckStar } from "@/components/Icons"
 import CarouselDots from "@/components/ui/carouselDots"
 

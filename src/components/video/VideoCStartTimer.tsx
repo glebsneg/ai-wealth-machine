@@ -1,6 +1,6 @@
 "use client"
 
-import VideoC, { TVideoCProps } from "@/components/video/Video"
+import VideoC, { TVideoCProps } from "@/components/video/VideoC"
 import { useTimerStore } from "@/store/timerStore";
 
 type TVideoCStartTimer = TVideoCProps & { seconds?: number }
