@@ -63,7 +63,7 @@ export default function VideoC({
             </picture>
 
 
-            <div className={clsx("relative rounded-2xl overflow-hidden object-contain", classNameVideo)}>
+            <div className={clsx("relative rounded-2xl overflow-hidden object-contain", aspectRatio, classNameVideo)}>
                 <video className={clsx("bg-black",
                     aspectRatio,
                     videoStarted ? "flex" : "hidden")}
