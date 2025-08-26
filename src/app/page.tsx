@@ -5,6 +5,7 @@ import GetAccessSection from "@/components/get-access/GetAccessSection";
 import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
 import ReviewsTiktok from "@/components/reviews-tiktok/ReviewsTiktok";
+import Reviews from "@/components/reviews/Reviews";
 import ShowWhenTimerFinishedWrapper from "@/components/timer/ShowWhenTimerFinishedWrapper";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <Hero />
       <ReviewsTiktok />
+      <Reviews />
       <Faq />
       <ShowWhenTimerFinishedWrapper>
         <GetAccessSection />

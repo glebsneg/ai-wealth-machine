@@ -1,10 +1,10 @@
-import { IDataSection, Video } from "@/types/types";
+import { IDataSection, TVideo } from "@/types/types";
 import srcPosterDesktop from "@/../public/images/hero/thumbnail-desktop.webp";
 import srcPosterMobile from "@/../public/images/hero/thumbnail-mobile.webp";
 
 interface IDataHero extends IDataSection {
     precentage: string;
-    video: Video
+    video: TVideo
 }
 
 export const dataHero: IDataHero = {

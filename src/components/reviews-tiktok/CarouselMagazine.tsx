@@ -3,9 +3,10 @@ import clsx from "clsx"
 import { useState, useEffect } from "react"
 
 import { CarouselApi, Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
-import { dataRevieTiktok, ReviewMagazineItem } from "@/components/reviews-tiktok/reviewTiktok.data"
+import { dataRevieTiktok, TReviewMagazineItem } from "@/components/reviews-tiktok/reviewTiktok.data"
 import GradientWrapper from "@/components/gradient-card/GradientWrapper"
 import CarouselDots from "@/components/ui/carouselDots"
+import { TProps } from "@/types/types"
 
 export default function CarouselMagazine() {
     const [api, setApi] = useState<CarouselApi>()
@@ -48,7 +49,7 @@ export function BlockMagazine() {
 function DataMagazine({
     reviewMagazineItem,
     className = ""
-}: { reviewMagazineItem: ReviewMagazineItem, className?: string }) {
+}: { reviewMagazineItem: TReviewMagazineItem } & TProps) {
     const Logo = reviewMagazineItem.logo.src;
     return (
         <div key={reviewMagazineItem.logo.alt} className={clsx("flex flex-col justify-top items-center text-center gap-3", className)}>

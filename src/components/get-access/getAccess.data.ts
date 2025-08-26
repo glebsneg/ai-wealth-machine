@@ -1,20 +1,20 @@
 import { IDataSection } from "@/types/types";
 
-type Price = {
+type TPrice = {
     text: string;
     priceOld: string;
     priceNew: string;
 }
 
-type Service = {
+type TService = {
     name: string;
-    price: Price;
+    price: TPrice;
 }
 
 interface IDataGetAccess extends IDataSection {
     titleEnd: string;
     badgeTop: string;
-    services: Service[];
+    services: TService[];
     signed: string;
 }
 

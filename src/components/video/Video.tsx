@@ -3,22 +3,21 @@ import clsx from "clsx";
 import Image, { StaticImageData } from 'next/image'
 import { useRef, useState } from "react";
 
-import { Video } from "@/types/types";
+import { TProps, TVideo } from "@/types/types";
 import { dataVideo } from "@/components/video/video.data";
 
-export type VideoCProps = {
-    dataVideoParameter: Video;
+export type TVideoCProps = {
+    dataVideoParameter: TVideo;
     pauseOnClick?: boolean;
     controls?: boolean;
     widthStartVideo?: () => void;
     aspectRatio?: string;
     fetchPriority?: "auto" | "high" | "low" | undefined;
     preload?: "auto" | "metadata" | "none";
+    placeholder?: "blur" | undefined
     sizes: string,
     classNameVideo?: string;
-    className?: string;
-
-}
+} & TProps
 
 export default function VideoC({
     dataVideoParameter,
@@ -28,10 +27,11 @@ export default function VideoC({
     aspectRatio = "",
     fetchPriority = "auto",
     preload = "none",
+    placeholder = undefined,
     sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1536px",
     classNameVideo = "",
     className = ""
-}: VideoCProps) {
+}: TVideoCProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [videoStarted, setVideoStarted] = useState<boolean>(false);
 
@@ -55,8 +55,9 @@ export default function VideoC({
                 }
                 <Image
                     sizes={sizes}
+                    placeholder={placeholder}
                     fill
-                    src={(dataVideoParameter.poster.srcMobile as StaticImageData)?.src ?? (dataVideoParameter.poster.src as StaticImageData).src}
+                    src={dataVideoParameter.poster.srcMobile ?? dataVideoParameter.poster.src}
                     alt={dataVideoParameter.poster.alt}
                     priority
                     fetchPriority={fetchPriority}

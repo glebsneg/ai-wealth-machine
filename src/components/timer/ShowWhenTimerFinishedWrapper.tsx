@@ -1,12 +1,12 @@
 "use client";
 import { useTimerStore } from "@/store/timerStore";
 
-type ShowWhenTimerFinishedWrapper = {
+type TShowWhenTimerFinishedWrapper = {
     children: React.ReactNode,
     show?: boolean,
 }
 
-export default function ShowWhenTimerFinishedWrapper({ children, show = true }: ShowWhenTimerFinishedWrapper) {
+export default function ShowWhenTimerFinishedWrapper({ children, show = true }: TShowWhenTimerFinishedWrapper) {
     const timerFinished: boolean = useTimerStore(s => s.finished);
     const needFinishedTimer: boolean = show ? timerFinished : !timerFinished;
 

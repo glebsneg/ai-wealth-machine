@@ -2,8 +2,9 @@ import clsx from "clsx";
 
 import styles from "@/components/gradient-card/GradientWrapper.module.css";
 import { Slot } from "@radix-ui/react-slot";
+import { TProps } from "@/types/types";
 
-type GradientCardProps = {
+type TGradientCardProps = {
   bgGradient_deg?: string;
   bgGradientColorFrom: string;
   bgGradientColorVia?: string;
@@ -25,7 +26,6 @@ type GradientCardProps = {
   gradientColorTo_2?: string;
 
   strokeWidthPx?: number;
-  className?: string;
   asChild?: boolean;
   children?: React.ReactNode;
 };
@@ -55,7 +55,7 @@ export default function GradientWrapper({
   className = "",
   asChild = false,
   children,
-}: GradientCardProps) {
+}: TGradientCardProps & TProps) {
 
   const bgGradient = `${bgGradient_deg}, ${bgGradientColorFrom} ${bgGradientFrom}, ${bgGradientColorVia ? bgGradientColorVia + bgGradientVia + "," : ""} ${bgGradientColorTo} ${bgGradientTo}`;
   const stroke1 = `${gradient_deg_1}, ${gradientColorFrom_1 ?? bgGradientColorFrom} ${gradientFrom_1 ?? bgGradientFrom}, ${gradientColorTo_1 ?? bgGradientColorTo} ${gradientTo_1 ?? bgGradientTo}`;

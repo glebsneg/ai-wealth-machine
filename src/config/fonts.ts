@@ -8,7 +8,7 @@ export const inter = Inter({
 
 export const rebond = Cabin({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["500", "600", "700"],
   variable: "--font-rebond"
 });
 

@@ -4,8 +4,9 @@ import clsx from "clsx";
 
 import GradientWrapper from "@/components/gradient-card/GradientWrapper";
 import { CarouselApi } from "@/components/ui/carousel";
+import { TProps } from "@/types/types";
 
-export default function CarouselDots({ api, length, className }: { api: CarouselApi, length: number, className?: string }) {
+export default function CarouselDots({ api, length, className }: { api: CarouselApi, length: number } & TProps) {
     const [carouselIndex, setCarouselIndex] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
 

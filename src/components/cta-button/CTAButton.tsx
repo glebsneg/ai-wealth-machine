@@ -3,10 +3,10 @@ import clsx from "clsx";
 import { dataCTAButton } from "@/components/cta-button/ctaButton.data"
 import { Button } from "@/components/ui/button"
 import { IconShield } from "@/components/Icons";
-import { Props } from "@/types/types";
+import { TProps } from "@/types/types";
 import { useTimerStore } from "@/store/timerStore";
 
-export default function CTAButton({ className }: Props) {
+export default function CTAButton({ className }: TProps) {
   const timerFinished = useTimerStore(s => s.finished);
 
   return (

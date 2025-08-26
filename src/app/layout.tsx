@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import { rebond, inter, atChrome, pFMarletDisplay, paralucent } from "@/config/fonts";
 import clsx from "clsx";
-import { DataLayout } from "./layout.data";
+import { DataLayout } from "@/app/layout.data";
 
 export const metadata: Metadata = {
   title: DataLayout.title,

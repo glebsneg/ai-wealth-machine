@@ -1,7 +1,7 @@
 import { FC, SVGProps } from "react";
 import { useId } from 'react'
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
+export type TIconSvgProps = SVGProps<SVGSVGElement> & {
     size?: number;
     width?: number;
     height?: number;
@@ -9,7 +9,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
     stopColor?: string,
 };
 
-const IconBBC: FC<IconSvgProps> = ({
+const IconBBC: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="126" height="37" viewBox="0 0 126 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@ const IconBBC: FC<IconSvgProps> = ({
 );
 
 
-const IconWired: FC<IconSvgProps> = ({
+const IconWired: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="155" height="37" viewBox="0 0 155 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@ const IconWired: FC<IconSvgProps> = ({
 
 );
 
-const IconBusinessInsider: FC<IconSvgProps> = ({
+const IconBusinessInsider: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="114" height="37" viewBox="0 0 114 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@ const IconBusinessInsider: FC<IconSvgProps> = ({
     </svg>
 );
 
-const IconTheGuardian: FC<IconSvgProps> = ({
+const IconTheGuardian: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="122" height="41" viewBox="0 0 122 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@ const IconTheGuardian: FC<IconSvgProps> = ({
 
 );
 
-const IconWashingtonPost: FC<IconSvgProps> = ({
+const IconWashingtonPost: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="220" height="33" viewBox="0 0 220 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@ const IconWashingtonPost: FC<IconSvgProps> = ({
 
 );
 
-const IconCNBC: FC<IconSvgProps> = ({
+const IconCNBC: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="101" height="75" viewBox="0 0 101 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +91,7 @@ const IconCNBC: FC<IconSvgProps> = ({
 
 );
 
-const IconReuters: FC<IconSvgProps> = ({
+const IconReuters: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="191" height="49" viewBox="0 0 191 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,7 +182,7 @@ const IconReuters: FC<IconSvgProps> = ({
 
 );
 
-const IconFortune: FC<IconSvgProps> = ({
+const IconFortune: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="155" height="49" viewBox="0 0 155 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +191,7 @@ const IconFortune: FC<IconSvgProps> = ({
 
 );
 
-const IconYahooFinance: FC<IconSvgProps> = ({
+const IconYahooFinance: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="132" height="49" viewBox="0 0 132 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -200,7 +200,7 @@ const IconYahooFinance: FC<IconSvgProps> = ({
 
 );
 
-const IconMarketWatch: FC<IconSvgProps> = ({
+const IconMarketWatch: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="225" height="33" viewBox="0 0 225 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +219,7 @@ const IconMarketWatch: FC<IconSvgProps> = ({
 
 );
 
-const IconInc: FC<IconSvgProps> = ({
+const IconInc: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="93" height="33" viewBox="0 0 93 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,7 +231,7 @@ const IconInc: FC<IconSvgProps> = ({
 
 );
 
-const IconEntrepreneur: FC<IconSvgProps> = ({
+const IconEntrepreneur: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="163" height="33" viewBox="0 0 163 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -251,7 +251,7 @@ const IconEntrepreneur: FC<IconSvgProps> = ({
 
 );
 
-const IconCrunchbase: FC<IconSvgProps> = ({
+const IconCrunchbase: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="227" height="33" viewBox="0 0 227 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,7 +269,7 @@ const IconCrunchbase: FC<IconSvgProps> = ({
 
 );
 
-const IconTheEconomist: FC<IconSvgProps> = ({
+const IconTheEconomist: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="111" height="57" viewBox="0 0 111 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -279,7 +279,7 @@ const IconTheEconomist: FC<IconSvgProps> = ({
 
 );
 
-const IconYCombinator: FC<IconSvgProps> = ({
+const IconYCombinator: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -288,7 +288,7 @@ const IconYCombinator: FC<IconSvgProps> = ({
 
 );
 
-const IconFT: FC<IconSvgProps> = ({
+const IconFT: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="41" height="57" viewBox="0 0 41 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -299,7 +299,7 @@ const IconFT: FC<IconSvgProps> = ({
 
 );
 
-const IconTechEU: FC<IconSvgProps> = ({
+const IconTechEU: FC<TIconSvgProps> = ({
     ...props
 }) => (
     <svg {...props} width="76" height="57" viewBox="0 0 76 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -308,7 +308,7 @@ const IconTechEU: FC<IconSvgProps> = ({
     </svg>
 );
 
-export const IconBloomberg: FC<IconSvgProps> = ({
+export const IconBloomberg: FC<TIconSvgProps> = ({
     size = 180,
     startColor = "#000",
     stopColor = "#000",
@@ -332,7 +332,7 @@ export const IconBloomberg: FC<IconSvgProps> = ({
 
 
 
-export const IconForbes: FC<IconSvgProps> = ({
+export const IconForbes: FC<TIconSvgProps> = ({
     size = 134,
     startColor = "#000",
     stopColor = "#000",
@@ -375,7 +375,7 @@ export const IconForbes: FC<IconSvgProps> = ({
 
 
 
-export const IconShield: FC<IconSvgProps> = ({
+export const IconShield: FC<TIconSvgProps> = ({
     size = 17,
     ...props
 }) => (
@@ -384,7 +384,7 @@ export const IconShield: FC<IconSvgProps> = ({
     </svg>
 );
 
-export const IconCheck: FC<IconSvgProps> = ({
+export const IconCheck: FC<TIconSvgProps> = ({
     size = 17,
     className,
     ...props
@@ -418,7 +418,7 @@ export const IconCheck: FC<IconSvgProps> = ({
     )
 }
 
-export const IconCheckStar: FC<IconSvgProps> = ({
+export const IconCheckStar: FC<TIconSvgProps> = ({
     size = 33,
     startColor = "#FF9A23",
     stopColor = "#FF0843",
@@ -439,7 +439,7 @@ export const IconCheckStar: FC<IconSvgProps> = ({
     )
 }
 
-export const IconTC: FC<IconSvgProps> = ({
+export const IconTC: FC<TIconSvgProps> = ({
     size = 72,
     startColor = "#000",
     stopColor = "#000",
@@ -461,7 +461,7 @@ export const IconTC: FC<IconSvgProps> = ({
     )
 }
 
-export const IconCircleArrow: FC<IconSvgProps> = ({
+export const IconCircleArrow: FC<TIconSvgProps> = ({
     size = 56,
     startColor = "#000",
     stopColor = "#000",
@@ -491,7 +491,7 @@ export const IconCircleArrow: FC<IconSvgProps> = ({
 
 interface ILogosAll {
     name: string;
-    component: FC<IconSvgProps>;
+    component: FC<TIconSvgProps>;
 }
 
 export const LOGOS_ALL: Readonly<ILogosAll>[] = [

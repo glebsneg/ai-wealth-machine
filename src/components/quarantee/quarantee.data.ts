@@ -1,10 +1,10 @@
-import { IDataSection, Image } from "@/types/types"
+import { IDataSection, TImage } from "@/types/types"
 
 interface IDataQuarantee extends IDataSection {
     text: string;
-    badge: Image;
-    photosLeft: Image[];
-    photosRight: Image[];
+    badge: TImage;
+    photosLeft: TImage[];
+    photosRight: TImage[];
 }
 
 export const dataQuarantee: IDataQuarantee = {

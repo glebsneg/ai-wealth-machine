@@ -1,4 +1,4 @@
-type DataCTAButton = {
+type TDataCTAButton = {
     textDefault: string;
     textCompleted: {
         basic: string;
@@ -6,7 +6,7 @@ type DataCTAButton = {
     };
 }
 
-export const dataCTAButton: DataCTAButton = {
+export const dataCTAButton: TDataCTAButton = {
     textDefault: "BACK TO VIDEO",
     textCompleted: {
         basic: "YES! GET INSTANT ACCESS NOW",

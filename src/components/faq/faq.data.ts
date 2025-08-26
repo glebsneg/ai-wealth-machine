@@ -1,11 +1,11 @@
 import { IDataSection } from "@/types/types"
 
-type FaqItems = {
+type TFaqItems = {
     question: string;
     answer: string;
 }
 interface IDataFaq extends IDataSection {
-    faqItems: FaqItems[];
+    faqItems: TFaqItems[];
 }
 
 export const dataFaq: IDataFaq = {

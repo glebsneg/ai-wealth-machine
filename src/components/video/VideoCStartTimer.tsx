@@ -1,14 +1,22 @@
 "use client"
 
-import VideoC, { VideoCProps } from "@/components/video/Video"
+import VideoC, { TVideoCProps } from "@/components/video/Video"
 import { useTimerStore } from "@/store/timerStore";
 
-type VideoCStartTimer = VideoCProps & { seconds?: number }
+type TVideoCStartTimer = TVideoCProps & { seconds?: number }
 
-export default function VideoCStartTimer({ dataVideoParameter, seconds = 5, aspectRatio, fetchPriority, preload, classNameVideo, className, sizes }: VideoCStartTimer) {
+export default function VideoCStartTimer({ dataVideoParameter, seconds = 5, aspectRatio, fetchPriority, preload, placeholder, classNameVideo, className, sizes }: TVideoCStartTimer) {
     return (
         <VideoC dataVideoParameter={dataVideoParameter} widthStartVideo={() => {
             useTimerStore.getState().start(seconds);
-        }} aspectRatio={aspectRatio} classNameVideo={classNameVideo} className={className} fetchPriority={fetchPriority} preload={preload} sizes={sizes} />
+        }}
+            aspectRatio={aspectRatio}
+            classNameVideo={classNameVideo}
+            className={className}
+            fetchPriority={fetchPriority}
+            preload={preload}
+            sizes={sizes}
+            placeholder={placeholder}
+        />
     )
 }

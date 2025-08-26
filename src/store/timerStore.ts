@@ -1,7 +1,7 @@
 "use client";
 import { create, StoreApi, UseBoundStore } from "zustand";
 
-type TimerState = {
+type TTimerState = {
     time: number;
     isRunning: boolean;
     finished: boolean;
@@ -9,9 +9,9 @@ type TimerState = {
     tick: () => void;
 };
 
-export type UseTimerStore = UseBoundStore<StoreApi<TimerState>>;
+export type TUseTimerStore = UseBoundStore<StoreApi<TTimerState>>;
 
-export const useTimerStore: UseTimerStore = create<TimerState>((set, get) => ({
+export const useTimerStore: TUseTimerStore = create<TTimerState>((set, get) => ({
     time: 0,
     isRunning: false,
     finished: false,

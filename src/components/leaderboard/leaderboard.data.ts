@@ -1,12 +1,12 @@
 import { IDataSection } from "@/types/types"
 
-type LeaderboardItem = {
+type TLeaderboardItem = {
     name: string;
     incomeAllTime: number;
     incomeLatsMonth: number;
 }
 interface IDataLeaderboard extends IDataSection {
-    leaderboardItem: LeaderboardItem[];
+    leaderboardItem: TLeaderboardItem[];
     etcBlock: string;
     statistics: {
         numbers: string;

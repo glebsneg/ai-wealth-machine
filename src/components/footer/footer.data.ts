@@ -1,18 +1,18 @@
-import { Link } from "@/types/types"
+import { TLink } from "@/types/types"
 
 type rightsReserved = {
     textStart: string;
     textEnd: string;
 }
 
-type DataFooter = {
-    terms: Link;
-    privacy: Link;
+type TDataFooter = {
+    terms: TLink;
+    privacy: TLink;
     text: string;
     rightsReserved: rightsReserved;
 }
 
-export const dataFooter: DataFooter = {
+export const dataFooter: TDataFooter = {
     terms: {
         href: "/",
         text: "Terms & Conditions"

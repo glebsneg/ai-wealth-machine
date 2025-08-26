@@ -17,7 +17,7 @@ export default function Faq() {
       >
         {dataFaq.faqItems.map((item, i) => (
           <AccordionItem value={`item-${i}`} key={item.answer + i} className="outline-1 rounded-[0.75rem] p-6 bg-background">
-            <AccordionTrigger className="flex items-center font-medium text-base lg:text-xl">{item.question}</AccordionTrigger>
+            <AccordionTrigger className="flex items-center font-medium text-base lg:text-xl hover:no-underline">{item.question}</AccordionTrigger>
             <AccordionContent className="pt-2.5 lg:pt-4 text-base lg:text-lg">
               {item.answer}
             </AccordionContent>

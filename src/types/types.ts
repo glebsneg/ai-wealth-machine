@@ -6,23 +6,23 @@ export interface IDataSection {
     subtitleBottom?: string;
 }
 
-export type Image = {
+export type TImage = {
     src: StaticImageData | string;
     srcMobile?: StaticImageData | string;
     alt: string;
 }
 
-export type Video = {
+export type TVideo = {
     src: string;
     srcMobile: string;
-    poster: Image;
+    poster: TImage;
 }
 
-export type Link = {
+export type TLink = {
     href: string;
     text: string
 }
 
-export type Props = {
+export type TProps = {
     className?: string
 }
