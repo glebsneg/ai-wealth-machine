@@ -19,6 +19,7 @@ export default function Hero() {
       <VideoCStartTimer
         dataVideoParameter={dataHero.video}
         fetchPriority="high"
+        preload="metadata"
         aspectRatio="aspect-[1/1.23] md:aspect-video"
         className="aspect-[1/1.23] md:aspect-video 2xl:w-2/3"
       />

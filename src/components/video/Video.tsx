@@ -13,6 +13,7 @@ export type VideoCProps = {
     widthStartVideo?: () => void;
     aspectRatio?: string;
     fetchPriority?: "auto" | "high" | "low" | undefined;
+    preload?: "auto" | "metadata" | "none";
     classNameVideo?: string;
     className?: string;
 
@@ -25,6 +26,7 @@ export default function VideoC({
     widthStartVideo = () => { },
     aspectRatio = "",
     fetchPriority = "auto",
+    preload = "none",
     classNameVideo = "",
     className = ""
 }: VideoCProps) {
@@ -78,7 +80,7 @@ export default function VideoC({
                             video.pause();
                         }
                     }}
-                    preload="metadata" playsInline aria-label={dataVideoParameter.poster.alt}>
+                    preload={preload} playsInline aria-label={dataVideoParameter.poster.alt}>
                     <source src={dataVideoParameter.src} media="(min-width: 768px)" type="video/mp4" />
                     <source src={dataVideoParameter.srcMobile} media="(max-width: 767px)" type="video/mp4" />
                 </video>
