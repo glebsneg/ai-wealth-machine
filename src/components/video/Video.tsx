@@ -14,6 +14,7 @@ export type VideoCProps = {
     aspectRatio?: string;
     fetchPriority?: "auto" | "high" | "low" | undefined;
     preload?: "auto" | "metadata" | "none";
+    sizes: string,
     classNameVideo?: string;
     className?: string;
 
@@ -27,6 +28,7 @@ export default function VideoC({
     aspectRatio = "",
     fetchPriority = "auto",
     preload = "none",
+    sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1536px",
     classNameVideo = "",
     className = ""
 }: VideoCProps) {
@@ -52,7 +54,7 @@ export default function VideoC({
                     />
                 }
                 <Image
-                    sizes="(max-width: 1536px) 100vw, 100vw"
+                    sizes={sizes}
                     fill
                     src={(dataVideoParameter.poster.srcMobile as StaticImageData)?.src ?? (dataVideoParameter.poster.src as StaticImageData).src}
                     alt={dataVideoParameter.poster.alt}

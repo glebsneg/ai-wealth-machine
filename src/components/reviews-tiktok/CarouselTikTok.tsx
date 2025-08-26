@@ -21,7 +21,14 @@ export default function CarouselTikTok() {
             <CarouselContent>
                 {dataRevieTiktok.reviewTiktokItems.map((reviewTiktokItem, index) => (
                     <CarouselItem key={reviewTiktokItem.name + index} className="pl-6 basis-[60%] md:basis-[40%] lg:basis-[30%] xl:basis-1/4 text-center">
-                        <VideoC pauseOnClick={true} controls={false} dataVideoParameter={reviewTiktokItem.video} className="aspect-[0.7/1]" aspectRatio="aspect-[0.7/1]" />
+                        <VideoC
+                            sizes="(max-width: 768px) 80vw, (max-width: 1200px) 30vw, 300px"
+                            pauseOnClick={true}
+                            controls={false}
+                            dataVideoParameter={reviewTiktokItem.video}
+                            className="aspect-[0.7/1]"
+                            aspectRatio="aspect-[0.7/1]"
+                        />
                         <div className="font-paralucent font-normal pt-4 bg-gradient-to-r from-gold-custom-start to-gold-custom-end bg-clip-text text-transparent">
                             <p className="text-lg {dataRevieTiktok.by}">{reviewTiktokItem.name}</p>
                             <p className="flex justify-center items-center uppercase text-xs">

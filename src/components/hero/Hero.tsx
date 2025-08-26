@@ -22,8 +22,7 @@ export default function Hero() {
         preload="metadata"
         aspectRatio="aspect-[1/1.23] md:aspect-video"
         className="aspect-[1/1.23] md:aspect-video 2xl:w-2/3"
-      />
-
+        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 1536px, 1536px" />
       <HeroTimer />
     </section>
   );
