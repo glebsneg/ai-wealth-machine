@@ -5,7 +5,7 @@ import { useTimerStore } from "@/store/timerStore";
 
 type TVideoCStartTimer = TVideoCProps & { seconds?: number }
 
-export default function VideoCStartTimer({ dataVideoParameter, seconds = 5, aspectRatio, fetchPriority, preload, placeholder, classNameVideo, className, sizes }: TVideoCStartTimer) {
+export default function VideoCStartTimer({ dataVideoParameter, seconds = 5, aspectRatio, fetchPriority, preload, placeholder, classNameVideo, className, sizes, priority }: TVideoCStartTimer) {
     return (
         <VideoC dataVideoParameter={dataVideoParameter} widthStartVideo={() => {
             useTimerStore.getState().start(seconds);
@@ -17,6 +17,7 @@ export default function VideoCStartTimer({ dataVideoParameter, seconds = 5, aspe
             preload={preload}
             sizes={sizes}
             placeholder={placeholder}
+            priority={priority}
         />
     )
 }

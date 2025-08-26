@@ -17,6 +17,7 @@ export type TVideoCProps = {
     placeholder?: "blur" | undefined
     sizes: string,
     classNameVideo?: string;
+    priority?: boolean;
 } & TProps
 
 export default function VideoC({
@@ -30,6 +31,7 @@ export default function VideoC({
     placeholder = undefined,
     sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1536px",
     classNameVideo = "",
+    priority = false,
     className = ""
 }: TVideoCProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -80,7 +82,7 @@ export default function VideoC({
                     fill
                     src={dataVideoParameter.poster.srcMobile ?? dataVideoParameter.poster.src}
                     alt={dataVideoParameter.poster.alt}
-                    priority
+                    priority={priority}
                     fetchPriority={fetchPriority}
                     className={clsx("",
                         videoStarted ? "opacity-0" : "opacity-100")} />

@@ -20,10 +20,11 @@ export default function Hero() {
         dataVideoParameter={dataHero.video}
         placeholder="blur"
         fetchPriority="high"
-        preload="metadata"
+        preload="none"
+        priority
         aspectRatio="aspect-[1/1.23] md:aspect-video"
         className="aspect-[1/1.23] md:aspect-video 2xl:w-3/4 w-full"
-        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 1536px, 1536px" />
+        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 60vw, 1200px" />
       <HeroTimer />
     </section>
   );

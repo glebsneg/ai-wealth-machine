@@ -53,11 +53,14 @@ const ReviewItemCard = () => {
       border-[1px] border-foreground/12
       flex flex-col gap-4">
         <div className='flex flex-row'>
-          <div className='relative w-12'>
+          <div className='relative w-12 h-12'>
             {Array.from({ length: 3 }, (_, j) => {
               return (
                 <Image key={i.toString() + j.toString()} 
                 src={dataReview.dollar.src} alt={dataReview.dollar.alt + " " + i + "_" + j}
+                  width={24}
+                  height={24}
+                  sizes="24px"
                   className={clsx("absolute top-2 left-4",
                     j === 0 ? "rotate-20" : j === 1 ? "-translate-y-1" : "rotate-160 "
                   )} />
@@ -74,7 +77,10 @@ const ReviewItemCard = () => {
         <p className="font-rebrand font-medium text-foreground/56">{reviewItem.review}</p>
         <div className="flex flex-row items-center font-rebrand font-semibold text-sm">
           <Image src={reviewItem.photo.src} alt={reviewItem.photo.alt + " " + i}
-            className='w-12 mr-3' />
+            width={48}
+            height={48}
+            sizes="48px"
+            className='w-12 h-12 mr-3 rounded-full' />
           <span className="mr-2">{reviewItem.name}, {reviewItem.city}</span>
           <span><IconCheckStar startColor="var(--color-yellow-custom)" stopColor="var(--color-yellow-custom)" size={24} /></span>
         </div>
