@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import clsx from 'clsx';
 
-import { dataReview } from "@/components/reviews/review.data"
+import { dataReview, TReviewItem } from "@/components/reviews/review.data"
 import CTAButton from "@/components/cta-button/CTAButton";
 import { IconCheckStar } from "@/components/Icons";
 
@@ -33,7 +33,10 @@ export default function Reviews() {
 
       <div className="py-9 flex flex-col xl:flex-row
       gap-x-0 gap-y-2 xl:gap-x-6 xl:gap-y-0">
-        <ReviewItemCard />
+       
+        {dataReview.reviewItems.map((reviewItem, i) => (
+            <ReviewItemCard key={reviewItem.name + i} reviewItem={reviewItem} i={i}/>
+        ))}
       </div>
 
 
@@ -45,13 +48,12 @@ export default function Reviews() {
   );
 }
 
-const ReviewItemCard = () => {
+const ReviewItemCard = ({reviewItem, i}: {reviewItem: TReviewItem, i: number}) => {
   return (
     <>
-    {dataReview.reviewItems.map((reviewItem, i) => (
-      <div key={reviewItem.name + i} className="p-8 rounded-2xl w-full
-      border-[1px] border-foreground/12
-      flex flex-col gap-4">
+      <div className="p-8 rounded-2xl w-full
+        border-[1px] border-foreground/12
+        flex flex-col gap-4">
         <div className='flex flex-row'>
           <div className='relative w-12 h-12'>
             {Array.from({ length: 3 }, (_, j) => {
@@ -92,8 +94,6 @@ const ReviewItemCard = () => {
           <span><IconCheckStar startColor="var(--color-yellow-custom)" stopColor="var(--color-yellow-custom)" size={24} /></span>
         </div>
       </div>
-    )
-    )}
     </>
   )
 }

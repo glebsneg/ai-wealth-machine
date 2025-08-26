@@ -6,6 +6,7 @@ import { dataRevieTiktok } from "@/components/reviews-tiktok/reviewTiktok.data"
 import VideoC from "@/components/video/VideoC"
 import { IconCheckStar } from "@/components/Icons"
 import CarouselDots from "@/components/ui/carouselDots"
+import { motion } from "motion/react"
 
 export default function CarouselTikTok() {
     const [api, setApi] = useState<CarouselApi>();
@@ -21,26 +22,34 @@ export default function CarouselTikTok() {
             <CarouselContent>
                 {dataRevieTiktok.reviewTiktokItems.map((reviewTiktokItem, index) => (
                     <CarouselItem key={reviewTiktokItem.name + index} className="pl-6 basis-[60%] md:basis-[40%] lg:basis-[30%] xl:basis-1/4 text-center">
-                        <VideoC
-                            sizes="(max-width: 767px) 50vw, (max-width: 1199px) 30vw, 300px"
-                            pauseOnClick={true}
-                            controls={false}
-                            dataVideoParameter={reviewTiktokItem.video}
-                            className="aspect-[0.7/1]"
-                            aspectRatio="aspect-[0.7/1]"
-                        />
-                        <div className="font-paralucent font-normal pt-4 bg-gradient-to-r from-gold-custom-start to-gold-custom-end bg-clip-text text-transparent">
-                            <p className="text-lg {dataRevieTiktok.by}">{reviewTiktokItem.name}</p>
-                            <p className="flex justify-center items-center uppercase text-xs">
-                                <span className="pr-1">{dataRevieTiktok.verified}</span>
-                                <span className="-mt-0.5">
-                                    <IconCheckStar size={17.5}
-                                        startColor="var(--color-gold-custom-start)"
-                                        stopColor="var(--color-gold-custom-end)"
-                                    />
-                                </span>
-                            </p>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 + index }}
+                            viewport={{ once: true, amount: 0.2 }} 
+                            key={index.toString()}
+                        >
+                            <VideoC
+                                sizes="(max-width: 767px) 50vw, (max-width: 1199px) 30vw, 300px"
+                                pauseOnClick={true}
+                                controls={false}
+                                dataVideoParameter={reviewTiktokItem.video}
+                                className="aspect-[0.7/1]"
+                                aspectRatio="aspect-[0.7/1]"
+                            />
+                            <div className="font-paralucent font-normal pt-4 bg-gradient-to-r from-gold-custom-start to-gold-custom-end bg-clip-text text-transparent">
+                                <p className="text-lg {dataRevieTiktok.by}">{reviewTiktokItem.name}</p>
+                                <p className="flex justify-center items-center uppercase text-xs">
+                                    <span className="pr-1">{dataRevieTiktok.verified}</span>
+                                    <span className="-mt-0.5">
+                                        <IconCheckStar size={17.5}
+                                            startColor="var(--color-gold-custom-start)"
+                                            stopColor="var(--color-gold-custom-end)"
+                                        />
+                                    </span>
+                                </p>
+                            </div>
+                        </motion.div>
                     </CarouselItem>
                 ))}
             </CarouselContent>

@@ -4,7 +4,7 @@ import person_1 from "@/../public/images/reviews/person_1.webp"
 import person_2 from "@/../public/images/reviews/person_2.webp"
 import person_3 from "@/../public/images/reviews/person_3.webp"
 
-type TReviewItem = {
+export type TReviewItem = {
     name: string;
     city: string;
     mrr: number;

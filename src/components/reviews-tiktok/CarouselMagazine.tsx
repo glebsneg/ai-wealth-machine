@@ -1,6 +1,7 @@
 "use client"
 import clsx from "clsx"
 import { useState, useEffect } from "react"
+import { motion } from "motion/react"
 
 import { CarouselApi, Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { dataRevieTiktok, TReviewMagazineItem } from "@/components/reviews-tiktok/reviewTiktok.data"
@@ -23,7 +24,7 @@ export default function CarouselMagazine() {
                     return (
                         <CarouselItem key={reviewMagazineItem.logo.alt + index} className="basis-full flex items-center justify-center">
                             <Wrapper className_1="max-w-96 md:max-w-xl" className="w-full rounded-2xl">
-                                <DataMagazine className="pt-6 pb-12" reviewMagazineItem={reviewMagazineItem} />
+                                <DataMagazine className="pt-6 pb-12" reviewMagazineItem={reviewMagazineItem} index={0} />
                             </Wrapper>
                         </CarouselItem>
                     )
@@ -40,7 +41,7 @@ export function BlockMagazine() {
     return (
         <Wrapper className="flex gap-6 rounded-2xl" className_2="p-8">
             {dataRevieTiktok.reviewMagazineItems.map((reviewMagazineItem, i) => (
-                <DataMagazine key={reviewMagazineItem.logo.alt + i} reviewMagazineItem={reviewMagazineItem} />
+                <DataMagazine key={reviewMagazineItem.logo.alt + i} reviewMagazineItem={reviewMagazineItem} index={i}/>
             ))}
         </Wrapper>
     )
@@ -48,12 +49,20 @@ export function BlockMagazine() {
 
 function DataMagazine({
     reviewMagazineItem,
+    index,
     className = ""
-}: { reviewMagazineItem: TReviewMagazineItem } & TProps) {
+}: { reviewMagazineItem: TReviewMagazineItem } & TProps & { index: number }) {
     const Logo = reviewMagazineItem.logo.src;
     return (
         <div key={reviewMagazineItem.logo.alt} className={clsx("flex flex-col justify-top items-center text-center gap-3", className)}>
-            <Logo startColor="#FDE87C" stopColor="#F7C136" aria-label={reviewMagazineItem.logo.alt} />
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 + index }}
+                viewport={{ once: true, amount: 0.2 }} 
+            >
+                <Logo startColor="#FDE87C" stopColor="#F7C136" aria-label={reviewMagazineItem.logo.alt} />
+            </motion.div>
             <span className="font-medium text-lg text-background/64">{reviewMagazineItem.text}</span>
         </div>
     )

@@ -9,7 +9,7 @@ import CTAButton from "@/components/cta-button/CTAButton"
 
 export default function Faq() {
   return (
-    <section className="flex flex-col w-full px-4 lg:px-60 py-12 lg:py-14 bg-[#FAFAFA] font-at-chrome outline-1">
+    <section className="flex flex-col w-full px-4 lg:px-60 py-12 lg:py-14 bg-[#FAFAFA] font-at-chrome outline-1 justify-center items-center">
       <h2 className="text-[2rem] md:text-[2.75rem]">{dataFaq.title}</h2>
       <Accordion
         type="multiple"

@@ -21,7 +21,6 @@
   --font-paralucent: var(--font-paralucent), ui-sans-serif, system-ui, sans-serif;
 
   /* Animations */
-  --animate-grow: grow 3000ms ease-in-out infinite;
 
   @keyframes grow {
     from {

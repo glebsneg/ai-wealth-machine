@@ -1,8 +1,10 @@
 "use client";
+import { AnimatePresence, motion } from "motion/react";
+import clsx from "clsx";
+
 import { useCountdown } from "@/hooks/useCountdown";
 import { useTimerStore } from "@/store/timerStore";
 import { dataTimer } from "@/components/timer/timer.data";
-import clsx from "clsx";
 
 export default function Timer() {
     useCountdown();
@@ -17,10 +19,22 @@ export default function Timer() {
         <div className={clsx("font-inter text-background hidden flex-col justify-center items-center",
             (timerIsRunning || timerFinished) && "!flex"
         )}>
-            <p className="text-xl">{dataTimer.title}</p>
-            <p className="font-black text-[2.5rem]">
-                {minutesText}:{secondsText}
-            </p>
+            <AnimatePresence initial={false}>
+                {(timerIsRunning || timerFinished) && "!flex" ? (
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0 }}
+                        key="Timer"
+                    >
+                        <p className="text-xl">{dataTimer.title}</p>
+                        <p className="font-black text-[2.5rem]">
+                            {minutesText}:{secondsText}
+                        </p>
+                    </motion.div>
+                ) : null}
+            </AnimatePresence>
+           
         </div>
     );
 }
