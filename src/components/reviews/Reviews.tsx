@@ -56,14 +56,21 @@ const ReviewItemCard = () => {
           <div className='relative w-12 h-12'>
             {Array.from({ length: 3 }, (_, j) => {
               return (
-                <Image key={i.toString() + j.toString()} 
-                src={dataReview.dollar.src} alt={dataReview.dollar.alt + " " + i + "_" + j}
-                  width={24}
-                  height={24}
-                  sizes="24px"
-                  className={clsx("absolute top-2 left-4",
+                <div
+                  key={i.toString() + j.toString()}
+                  className={clsx(
+                    "absolute top-2 left-4 w-14 h-14",
                     j === 0 ? "rotate-20" : j === 1 ? "-translate-y-1" : "rotate-160 "
-                  )} />
+                  )}
+                >
+                  <Image
+                    src={dataReview.dollar.src}
+                    alt={dataReview.dollar.alt + " " + i + "_" + j}
+                    fill
+                    sizes="56px"
+                    className="object-contain"
+                  />
+                </div>
               )
             })}
           </div>

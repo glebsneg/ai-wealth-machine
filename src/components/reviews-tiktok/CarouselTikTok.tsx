@@ -22,7 +22,7 @@ export default function CarouselTikTok() {
                 {dataRevieTiktok.reviewTiktokItems.map((reviewTiktokItem, index) => (
                     <CarouselItem key={reviewTiktokItem.name + index} className="pl-6 basis-[60%] md:basis-[40%] lg:basis-[30%] xl:basis-1/4 text-center">
                         <VideoC
-                            sizes="(max-width: 768px) 80vw, (max-width: 1200px) 30vw, 300px"
+                            sizes="(max-width: 767px) 50vw, (max-width: 1199px) 30vw, 300px"
                             pauseOnClick={true}
                             controls={false}
                             dataVideoParameter={reviewTiktokItem.video}
