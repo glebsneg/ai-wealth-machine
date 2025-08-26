@@ -24,7 +24,7 @@ export default function Hero() {
         priority
         aspectRatio="aspect-[1/1.23] md:aspect-video"
         className="aspect-[1/1.23] md:aspect-video 2xl:w-3/4 w-full"
-        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 60vw, 1200px" />
+        sizes="(max-width: 767px) 100vw, (max-width: 1279px) 80vw, (max-width: 1535px) 60vw, 1200px" />
       <HeroTimer />
     </section>
   );

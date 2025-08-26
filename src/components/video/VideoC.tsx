@@ -68,25 +68,22 @@ export default function VideoC({
     return (
         <div className={clsx("relative w-full", className)}>
 
-            <picture className="absolute inset-0 pointer-events-none">
-                {dataVideoParameter.poster.srcMobile &&
-                    <source
-                        srcSet={(dataVideoParameter.poster.src as StaticImageData).src}
-                        media="(min-width: 768px)"
-                        type="image/webp"
-                    />
-                }
-                <Image
-                    sizes={sizes}
-                    placeholder={placeholder}
-                    fill
-                    src={dataVideoParameter.poster.srcMobile ?? dataVideoParameter.poster.src}
-                    alt={dataVideoParameter.poster.alt}
-                    priority={priority}
-                    fetchPriority={fetchPriority}
-                    className={clsx("",
-                        videoStarted ? "opacity-0" : "opacity-100")} />
-            </picture>
+            <Image
+                sizes={sizes}
+                placeholder={placeholder}
+                fill
+                src={(dataVideoParameter.poster.srcMobile && 
+                    typeof window !== "undefined" && 
+                    window.matchMedia && 
+                    window.matchMedia("(max-width: 767px)").matches
+                )
+                    ? dataVideoParameter.poster.srcMobile
+                    : dataVideoParameter.poster.src}
+                alt={dataVideoParameter.poster.alt}
+                priority={priority}
+                fetchPriority={fetchPriority}
+                className={clsx("absolute inset-0 pointer-events-none",
+                    videoStarted ? "opacity-0" : "opacity-100")} />
 
 
             <div className={clsx("relative rounded-2xl overflow-hidden object-contain", aspectRatio, classNameVideo)}>
