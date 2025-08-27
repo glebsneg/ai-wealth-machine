@@ -13,7 +13,7 @@ export default function Faq() {
       <h2 className="text-[2rem] md:text-[2.75rem]">{dataFaq.title}</h2>
       <Accordion
         type="multiple"
-        className="space-y-2 lg:space-y-3 py-6 lg:py-9 lg:pt-9"
+        className="w-full xl:w-3/4 space-y-2 lg:space-y-3 py-6 lg:py-9 lg:pt-9"
       >
         {dataFaq.faqItems.map((item, i) => (
           <AccordionItem value={`item-${i}`} key={item.answer + i} className="outline-1 rounded-[0.75rem] p-6 bg-background">
